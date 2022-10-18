@@ -1,0 +1,12 @@
+{
+  "language": "csharp",
+  "app": "dotnet run --project AzureCdkDemo.csproj",
+  "projectId": "d26d5512-3d5d-4368-913e-8f8a4535bbf0",
+  "sendCrashReports": "false",
+  "terraformProviders": [],
+  "terraformModules": [],
+  "context": {
+    "excludeStackIdFromLogicalIds": "true",
+    "allowSepCharsInLogicalIds": "true"
+  }
+}
