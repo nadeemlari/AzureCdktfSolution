@@ -1,13 +1,12 @@
+using System;
 using Constructs;
 using HashiCorp.Cdktf;
 using HashiCorp.Cdktf.Providers.Azurerm.Provider;
 using HashiCorp.Cdktf.Providers.Azurerm.ResourceGroup;
 using HashiCorp.Cdktf.Providers.Azurerm.StorageAccount;
 using HashiCorp.Cdktf.Providers.Azurerm.VirtualNetwork;
-using HashiCorp.Cdktf.Providers.Azurerm.StorageContainer;
 
-
-namespace AzureCdkDemo
+namespace MyCompany.MyApp
 {
     class MainStack : TerraformStack
     {
@@ -33,18 +32,13 @@ namespace AzureCdkDemo
             });
             var stg = new StorageAccount(this, "str", new StorageAccountConfig
             {
-                Name = "nadeemlari1",
+                Name = "nadeemlaristg",
                 Location = rg.Location,
                 AccessTier = "Standard",
+                AccountKind = "StorageV2",
                 AccountReplicationType = "LRS"
 
             });
-            //new StorageContainer(this, "cont", new StorageContainerConfig
-            //{
-            //    Name = "vdhs",
-            //    StorageAccountName = "xyz123",
-            //    ContainerAccessType = "private"
-            //});
         }
     }
 }
